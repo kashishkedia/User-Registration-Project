@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1b1f23;
+  color: #e0e0e0;
+}
+
+.container {
+  background: #2d333b;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.tab-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background: #2d333b;
+  color: #e0e0e0;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+}
+
+.tab-button.active {
+  background: #238636;
+  border-radius: 4px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+h1, h2 {
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+form input, form button {
+  margin-bottom: 12px;
+  width: 100%;
+  padding: 10px;
+  background: #3a3f45;
+  color: #e0e0e0;
+  border: 1px solid #444c56;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #238636;
+  color: white;
+  font-family: 'Georgia', serif;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.user-list-container {
+  max-height: 60vh; /* Set to 60% of the viewport height */
+  overflow-y: auto;
+  margin-top: 12px;
+  background: #444c56;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+#userList li {
+  background: #3a3f45;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#userList button {
+  margin-left: 8px;
+  background-color: #ff7b72;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#userList button:hover {
+  background-color: #ff4a3d;
+}

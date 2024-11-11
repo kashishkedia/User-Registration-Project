@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="tab-menu">
+            <button class="tab-button active" onclick="showTab('addUser')">Add User</button>
+            <button class="tab-button" onclick="showTab('viewUsers')">View Users</button>
+        </nav>
+
+        <section id="addUser" class="tab-content active">
+            <h1>Add New User</h1>
+            <form id="userForm">
+                <input type="text" id="name" placeholder="Name" required />
+                <input type="email" id="email" placeholder="Email" required />
+                <input type="date" id="dob" required />
+                <button type="submit" id="submitButton">Add User</button>
+            </form>
+        </section>
+
+        <section id="viewUsers" class="tab-content">
+            <h2>Registered Users</h2>
+            <!-- Scrollable container for user list -->
+            <div class="user-list-container">
+                <ul id="userList"></ul>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+            document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
